@@ -1,0 +1,160 @@
+.controls-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 20;
+}
+
+.controls-panel {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 250px;
+}
+
+.controls-panel h2 {
+  color: #667eea;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.control-btn:active {
+  transform: translateY(0);
+}
+
+.control-btn.idle {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.control-btn.wave {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.control-btn.dance {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.control-btn.export {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #000;
+  font-weight: 700;
+}
+
+.export-info {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.info-toggle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.info-toggle:hover {
+  background: rgba(102, 126, 234, 1);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.credits {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 11px;
+  color: #888;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.credits p {
+  margin: 2px 0;
+}
+
+@media (max-width: 768px) {
+  .controls-container {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .controls-panel {
+    min-width: 200px;
+    padding: 12px;
+  }
+
+  .button-group {
+    gap: 6px;
+  }
+
+  .control-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .info-toggle {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls-container {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .controls-panel {
+    min-width: 160px;
+    padding: 10px;
+  }
+
+  .control-btn {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+}
